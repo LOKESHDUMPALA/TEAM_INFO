@@ -16,7 +16,7 @@ const UserProvider = ({children}) => {
               const teamname = user.teamname;
               // console.log(teamname);
               try{
-                const response = await axios.get(`http://localhost:4000/users/${teamname}`);
+                const response = await axios.get(`https://teaminfo-9ygo.onrender.com/users/${teamname}`);
                 const data = response.data;
                 setTeamData(data);
               } catch(error){
@@ -25,7 +25,7 @@ const UserProvider = ({children}) => {
             }
             else if(user && user.role==="Admin"){
               try{  
-                  const response =  await axios.get("http://localhost:4000/average_progress");
+                  const response =  await axios.get("https://teaminfo-9ygo.onrender.com/average_progress");
                   console.log(response.data);
                    const data = response.data;
                   setTeamProgress(data);
