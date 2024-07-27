@@ -37,7 +37,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:4000/signup", formData, {
+      const response = await axios.post("https://teaminfo-9ygo.onrender.com/signup", formData, {
         headers: {
           "Content-Type": "application/json",
         }
