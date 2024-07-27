@@ -30,7 +30,7 @@ function ProgressTM() {
         try {
 
             setShowProgress(true);
-      const response = await axios.patch('http://localhost:4000/updateProgress', {
+      const response = await axios.patch('https://teaminfo-9ygo.onrender.com/updateProgress', {
         _id: user._id,
         progress: numberInput, 
       });
