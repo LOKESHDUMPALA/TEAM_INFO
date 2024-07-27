@@ -1,47 +1,119 @@
+.issues-container {
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+
 .first {
-    text-align: center;
-    margin-top: 0px;
-    height: 100vh;
-     background-image: url("../Assets/Issess.png");
-    background-size:100% 100%;
-  }
-  
+  text-align: center;
+  height: 100%;
+  background-image: url("../Assets/Issues.png"); /* Replace with your actual image URL */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  border-radius: 10px;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ccontainer {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px; /* Adjust height as needed */
+}
+
+button {
+  background-color: #26b721;
+  color: #ffffff;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e891b;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .modal-content {
-    background-color: #ece0e0;
-    margin: 3% auto 15% auto;
-    border: 1px solid #888;
-    width: 50%;
     padding: 20px;
   }
-  
-  .ccontainer {
-    padding: 15px;
-    background-color:darkcyan;
-    border: none;
-  }
-  
+
   label {
-    display: block;
-    margin-bottom: 8px;
-    text-align: left;
+    font-size: 0.9rem;
   }
-  
+
   input[type="text"],
   textarea {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-bottom: 12px;
+    font-size: 0.9rem;
   }
-  
+
   button {
-    background-color: #26b721;
-    color: #060605;
-    padding: 14px 20px;
-    border: none;
-    cursor: pointer;
+    padding: 12px 18px;
+    font-size: 0.9rem;
   }
-  
-  button:hover {
-    background-color: #1e891b;
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 15px;
   }
+
+  label {
+    font-size: 0.8rem;
+  }
+
+  input[type="text"],
+  textarea {
+    font-size: 0.8rem;
+  }
+
+  button {
+    padding: 10px 16px;
+    font-size: 0.8rem;
+  }
+}

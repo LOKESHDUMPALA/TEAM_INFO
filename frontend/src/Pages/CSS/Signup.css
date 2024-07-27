@@ -1,14 +1,47 @@
-.card-registration .select-input.form-control[readonly]:not([disabled]) {
+/* CSS for Signup component */
+
+.card-registration {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-registration .img-fluid {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+  }
+  
+  .card-registration .card-body {
+    padding: 3rem;
+  }
+  
+  .card-registration h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  
+  .card-registration .form-control-lg {
+    height: 50px;
     font-size: 1rem;
-    line-height: 2.15; 
-    padding-left: .75em;
-    padding-right: .75em;
+  }
+  
+  .card-registration .form-label {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .card-registration .btn-lg {
+    height: 50px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 1199.98px) {
+    .card-registration .img-fluid {
+      display: none;
     }
-    .card-registration .select-arrow {
-    top: 13px;
-    }
-   h3{
-    font-style: normal;
-    font-size: large;
-   }
-    
+  }
+  

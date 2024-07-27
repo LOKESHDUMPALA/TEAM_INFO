@@ -1,39 +1,81 @@
-.containerr {
-  text-align: center;
-  background-color: navy;
-  width: 100% ;
-  background-size: 100% 100%;
-  margin-left: 0px;
-  padding: 10px;
-color:#fff;
- }
- 
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
+}
 
-.navv{
-  padding: 12px;
-  
+.nv {
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
-} 
- 
-.navbar-list {
-  list-style-type: none;
+  padding: 20px;
+  color: white;
+  background-color: #354259;
+  background-size: 100% 100%;
+  z-index: 1000; /* Ensures the navbar is on top */
+  position: relative;
+}
+
+.nv-header {
   display: flex;
-  margin-left: 0px;
-  gap: 220px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-.navbar-list a {
+.nv-logo {
+  font-size: 1.5rem;
+}
+
+.nv-hamburger {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none; /* Hide by default */
+}
+
+.nv-links {
+  display: flex;
+  gap: 30px;
+  justify-content: space-around;
+}
+
+.nv-links a {
   text-decoration: none;
-  padding-right: 70px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  color:white;
-  transition: color 0.3s ease;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+  margin-right: 70px;
 }
 
-.navbar-list a:hover {
-  color:red;
+.nv-links a:hover {
+  color: #F8DE22;
 }
 
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .nv-hamburger {
+    display: block; /* Show hamburger button */
+  }
+
+  .nv-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    top: 70px; /* Adjust top as needed */
+    right: 0; /* Align to the right */
+    width: 200px; /* Fixed width for the menu */
+    background-color: #333;
+    padding: 10px;
+    z-index: 999; /* Ensure the menu stays on top */
+  }
+
+  .nv-links.open {
+    display: flex;
+  }
+}

@@ -1,21 +1,53 @@
-.Pie-Chart-container {
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    background-image: url("../Assets/Piecharts.png");
-    background-size:100% 100%;
-    height:90vh;
+.Piecharts-container {
+  background-image: url("../Assets/Piecharts.png");
+  background-size: cover;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Padding for spacing */
 }
-  .recharts-legend-wrapper {
-    font-size: 5px; 
+
+.Piecharts-sub-container {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  padding: 20px; /* Padding for spacing */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for depth */
+  max-width: 600px; /* Adjust maximum width as needed */
+  width: 100%; /* Full width of parent container */
+}
+
+@media (max-width: 768px) {
+  .Piecharts-sub-container {
+    padding: 10px; /* Adjust padding for smaller screens */
   }
-  .recharts-legend-item-text {
-    font-size: 5px;
+}
+
+.recharts-legend-wrapper {
+  font-size: 14px; /* Adjust legend font size */
+}
+
+.recharts-legend-item-text {
+  font-size: 12px; /* Adjust legend item text size */
+}
+
+.recharts-legend-item {
+  margin-right: 10px; /* Adjust spacing between legend items */
+}
+
+.recharts-legend-icon {
+  width: 20px; /* Adjust legend icon size */
+  height: 20px;
+}
+
+@media (max-width: 600px) {
+  .Piecharts-sub-container {
+    max-width: 90%; /* Reduce maximum width further for smaller screens */
   }
-  .recharts-legend-item {
-    margin-right: 10px; 
+}
+
+@media (max-width: 480px) {
+  .Piecharts-sub-container {
+    max-width: 100%; /* Allow full width on even smaller screens */
   }
-  .recharts-legend-icon {
-    width: 50px; 
-    height: 50px; 
-  }
+}

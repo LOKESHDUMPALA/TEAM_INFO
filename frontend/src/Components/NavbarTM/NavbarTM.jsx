@@ -1,21 +1,31 @@
-import React, { useContext } from 'react';
-import "./NavbarTm.css";
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import UserContext from '../../Context/ContextAPI';
+
+import "./NavbarTm.css";
+
 const NavbarTM = () => {
-  const {user} = useContext(UserContext);
-  return (   
-      <div className='containerr' >
-        < nav className='navv'>
-     <ul className='navbar-list' >
-     <li  >TEAM_INFO   <span style={{ marginLeft: '30px' }}>Hi!! {user.name}</span></li>
-     
-     <li><Link to="/teammember/progress">PROGRESS</Link></li>
-     <li><Link to="/teammember/issues">ISSUES</Link></li>
-     <li><Link to="/login">LOGOUT</Link></li>
-     </ul>
-     </nav>
-     </div>
+ 
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  return (
+    <div className="nv">
+      <div className="nv-header">
+        <div className="nv-logo">TEAM_INFO</div>
+        <button className="nv-hamburger" onClick={toggleMenu}>
+          ☰
+        </button>
+      </div>
+      <div className={`nv-links ${menuOpen ? "open" : ""}`}>
+        <Link to="/teammember/progress">PROGRESS</Link>
+        <Link to="/teammember/issues">ISSUES</Link>
+        <Link to="/login">LOGOUT</Link>
+      </div>
+    </div>
+    
   );
 };
 

@@ -1,5 +1,6 @@
   /* fontawesome importing */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
             .header {
               display: flex;
               justify-content: space-between;
@@ -75,7 +76,8 @@
               display: flex;
               justify-content: space-around;
               align-items: center;
-              padding: 40px 80px;
+              padding: 40px 0px;
+          
             }
 
             .achievements .work {
@@ -83,7 +85,8 @@
               flex-direction: column;
               justify-content: center;
               align-items: center;
-              padding: 0 40px;
+              padding-left: 30px;
+              margin-left: 0px;
             }
 
             .achievements .work i {
@@ -130,8 +133,10 @@
               align-items: center;
               background-image:url("../../Components/Assets/Homes.png");
               padding: 40px 80px;
+            
               background-size:100% 100%;
               background-repeat:no-repeat;
+            
             }
 
             .footer .copy {

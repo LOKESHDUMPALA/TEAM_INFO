@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import  './CSS/Login.css';
 import UserContext from '../Context/ContextAPI';
-import Logins from '../Components/Assets/Logins.png';
 const Login = () => {
 
   const { setUserContext } = useContext(UserContext);
@@ -67,13 +66,13 @@ const Login = () => {
   };
 
   return (
-    <section className="vh-100" style={{ backgroundImage: `url(${Logins})`, backgroundSize:'100%'}}>
+    <section className="vh-50" style={{backgroundColor:'whitesmoke'}}>
       <div className="container py-5 h-100">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-12 col-md-8 col-lg-6 col-xl-5 ">
             <div className="card shadow-2-strong" style={{ borderRadius: '1rem' }}>
               <div className="card-body p-5">
-                <h3 className="mb-5 text-center " style={{fontSize: "1.6rem"}}>LOGIN</h3>
+                <h3 className="mb-5 text-center " style={{fontSize: "1.6rem" , marginTop:"-50px"}}>LOGIN</h3>
 
                 <form onSubmit={handleSubmit}>
                 <label className="form-label" htmlFor="email">
@@ -111,12 +110,12 @@ const Login = () => {
                     Login
                   </button>
 
-                  <hr className="my-4" />
+                  <hr className="my-2" />
 
                   <button className="btn btn-lg btn-block btn-primary w-100 " style={{ backgroundColor: '#dd4b39' }} type="submit">
                     <i className="fab fa-google me-2 " ></i> Sign in with Google
                   </button>
-                  <p className="fw-bold mt-5 mb-0">Don't Have an account? <Link to="/signup" className="text-primary "><u>SIGNUP</u></Link></p>
+                  <p className="fw-bold mt-4 mb-0" style={{fontSize:"1.5rem"}}>Don't Have an account? <Link to="/signup" className="text-primary " style={{fontSize:"1.5rem",paddingBottom:"0px"}}><u>SIGNUP</u></Link></p>
                 </form>
               </div>
             </div>

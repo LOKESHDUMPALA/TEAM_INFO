@@ -1,15 +1,34 @@
-.bar-graph-container
-{
+.bar-graph-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image:url("../Assets/Bargraphs_image.png");
-    background-size:100% 100%;
+    background-image: url("../Assets/Bargraph.png");
+    background-size: cover;
     background-repeat: no-repeat;
+    margin-top: -80px;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
+
 .card {
     background-color: white;
-    padding: 50px;
+    padding: 20px; /* Adjust padding for smaller screens */
     border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Example shadow effect */
+    width: 90%; /* Example width for responsiveness */
+    max-width: 600px; /* Example max-width for responsiveness */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 15px; /* Further adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 10px; /* Further adjust padding for even smaller screens */
+    }
 }

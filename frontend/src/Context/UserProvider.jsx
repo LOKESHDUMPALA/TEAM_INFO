@@ -14,7 +14,7 @@ const UserProvider = ({children}) => {
         const fetchData = async () =>{
             if(user && user.role==="TeamLead"){
               const teamname = user.teamname;
-              console.log(teamname);
+              // console.log(teamname);
               try{
                 const response = await axios.get(`http://localhost:4000/users/${teamname}`);
                 const data = response.data;
@@ -24,7 +24,7 @@ const UserProvider = ({children}) => {
               }
             }
             else if(user && user.role==="Admin"){
-              try{
+              try{  
                   const response =  await axios.get("http://localhost:4000/average_progress");
                   console.log(response.data);
                    const data = response.data;

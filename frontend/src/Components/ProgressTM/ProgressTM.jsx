@@ -2,13 +2,14 @@ import React, { useContext, useState } from 'react';
 import './ProgressTM.css';
 import UserContext from '../../Context/ContextAPI';
 import axios from 'axios';
-import Progress from "../Assets/Progress.png";
+// import Progress from "../Assets/Progress.png";
+import TMprogress from "../Assets/TMprogress.png";
 function ProgressTM() {
         const {user} =useContext(UserContext)  
-  //  console.log(user);
+   
   const tmpage = {
     fontFamily: 'sans-serif',
-    backgroundImage: `url(${Progress})`,
+    backgroundImage: `url(${TMprogress})`,
     backgroundSize: '100% 100%',
     margin: '0',
     padding: '0',
@@ -43,7 +44,6 @@ function ProgressTM() {
 
   return (
     <div style={tmpage}>
-      <p className="page-title">Welcome TeamMember!!!</p>
 
       <div className="app-container">
         <h4 className="page-heading">Update your progress</h4>

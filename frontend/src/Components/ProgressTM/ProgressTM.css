@@ -1,28 +1,58 @@
 .page-title {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  z-index: 1000; /* Ensure it stays above other content */
+  width: 100%; /* Ensure it spans the entire width */
+  background-color: #354259; /* Match the navbar background */
   text-align: center;
   color: white;
-  margin: 200px 0;
-  }
+}
 
 .app-container {
-  background-color:skyblue;
-  padding: 80px;
+  background-color: skyblue;
+  padding: 40px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: -10%; /* Adjusted to center content */
 }
 
 .page-heading {
   margin-top: 0;
-  color:blue;
+  color: blue;
+  font-size: 1.5rem;
 }
 
 .input-container {
   margin-bottom: 20px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-butt {
+.input-container label {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.input-container input {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.butt {
   background-color: #4caf50;
   color: #ffffff;
   padding: 10px 20px;
@@ -30,17 +60,93 @@ butt {
   cursor: pointer;
   border: none;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.butt:hover {
+  background-color: #45a049;
 }
 
 .progress-container {
   margin-top: 20px;
 }
- 
 
-.page-title {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px;
+.progress-container progress {
+  width: 100%;
+  max-width: 300px;
+  height: 20px;
+  appearance: none; /* Remove default styling */
+  border: none; /* Remove border */
+  background-color: #ddd; /* Light gray background */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.progress-container progress::-webkit-progress-bar {
+  background-color: #ddd; /* Light gray background */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.progress-container progress::-webkit-progress-value {
+  background-color: #f44336; /* Red color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.progress-container progress::-moz-progress-bar {
+  background-color: #f44336; /* Red color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 20px;
+  }
+
+  .page-heading {
+    font-size: 1.2rem;
+  }
+
+  .input-container {
+    padding: 10px;
+  }
+
+  .input-container label {
+    font-size: 1rem;
+  }
+
+  .input-container input {
+    font-size: 1rem;
+  }
+
+  .butt {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .progress-container progress {
+    height: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-heading {
+    font-size: 1rem;
+  }
+
+  .input-container label {
+    font-size: 0.9rem;
+  }
+
+  .input-container input {
+    font-size: 0.9rem;
+  }
+
+  .butt {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .progress-container progress {
+    height: 12px;
+  }
 }

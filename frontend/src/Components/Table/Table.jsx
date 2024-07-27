@@ -12,13 +12,12 @@ const Table = ({ data }) => {
     const fetchData = async (teamName) => {
       try {
         const response = await axios.get(`http://localhost:4000/users/${teamName}`);
-        // Handle the response data as needed
         const dataa = response.data;
         const newdata = dataa.map((item) => ({
-            name: item.name,
-            value: item.progress,
-         }));
-         setTeamData(newdata);
+          name: item.name,
+          value: item.progress,
+        }));
+        setTeamData(newdata);
       } catch (error) {
         console.error('Error fetching team data:', error);
       }
@@ -34,33 +33,45 @@ const Table = ({ data }) => {
     setBarState(true);
   };
 
+  const closeOverlay = () => {
+    setBarState(false);
+    setSelectedTeam(null);
+  };
+
   return (
     <div className="table-component-container">
       <div className="table-component-table-container">
         <h2>OVERALL TEAM PROGRESS</h2>
-        <table className="table-component-table">
-          <thead>
-            <tr>
-              <th>Project Name</th>
-              <th>Team Name</th>
-              <th>Progress</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((items) => (
-              <tr key={items.projectname}>
-                <td onClick={() => handleTeamClick(items.teamname)}>{items.projectname}</td>
-                <td onClick={() => handleTeamClick(items.teamname)}>{items.teamname}</td>
-                <td onClick={() => handleTeamClick(items.teamname)}>{items.averageProgress}%</td>
+        <div className="table-wrapper">
+          <table className="table-component-table">
+            <thead>
+              <tr>
+                <th>Project Name</th>
+                <th>Team Name</th>
+                <th>Progress</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {data.map((items) => (
+                <tr key={items.projectname}>
+                  <td onClick={() => handleTeamClick(items.teamname)}>{items.projectname}</td>
+                  <td onClick={() => handleTeamClick(items.teamname)}>{items.teamname}</td>
+                  <td onClick={() => handleTeamClick(items.teamname)}>{items.averageProgress}%</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-   
-      {barstate ? (<Bargraphs data={teamdata} />) : null}
-      
-   
+
+      {barstate && (
+        <div className={`overlay ${barstate ? 'visible' : ''}`}>
+          <div className="overlay-content">
+            <button className="close-button" onClick={closeOverlay}>Close</button>
+            <Bargraphs data={teamdata} />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

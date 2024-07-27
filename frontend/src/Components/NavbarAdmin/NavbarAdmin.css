@@ -4,17 +4,37 @@ body {
   font-weight: 600;
 }
 
- .nv{
+.nv {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px ;
-
+  padding: 20px;
   color: white;
   background-color: #354259;
   background-size: 100% 100%;
- }
+  z-index: 1000; /* Ensures the navbar is on top */
+  position: relative;
+}
 
+.nv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nv-logo {
+  font-size: 1.5rem;
+}
+
+.nv-hamburger {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none; /* Hide by default */
+}
 
 .nv-links {
   display: flex;
@@ -27,11 +47,34 @@ body {
   color: #ffffff;
   font-size: 1rem;
   padding: 10px;
-
   transition: color 0.3s ease-in-out;
   margin-right: 70px;
 }
 
 .nv-links a:hover {
-  color:#F8DE22;
+  color: #F8DE22;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .nv-hamburger {
+    display: block; /* Show hamburger button */
+  }
+
+  .nv-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    top: 70px; /* Adjust top as needed */
+    right: 0; /* Align to the right */
+    width: 200px; /* Fixed width for the menu */
+    background-color: #333;
+    padding: 10px;
+    z-index: 999; /* Ensure the menu stays on top */
+  }
+
+  .nv-links.open {
+    display: flex;
+  }
 }
