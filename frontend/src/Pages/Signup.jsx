@@ -37,7 +37,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://teaminfo-9ygo.onrender.com/signup", formData, {
+      const response = await axios.post("https://teaminfo-9ygo.onrender.com/api/auth/signup", formData, {
         headers: {
           "Content-Type": "application/json",
         }
