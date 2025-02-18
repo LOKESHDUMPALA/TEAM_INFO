@@ -34,8 +34,8 @@ const Login = () => {
                 if(response.data.success){ 
                   if(response.data.pwd){
                     alert("user logged successfully");  
-                      const userString = response.data.user;
-                       const user = JSON.parse(userString);
+                      
+                       const user =  response.data.user;
                        setUserContext(user); //updating user data using contextAPI
 
                         if(user.role ==="Admin") navigate("/admin");
