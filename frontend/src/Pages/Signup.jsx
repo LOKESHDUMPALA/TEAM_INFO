@@ -15,6 +15,8 @@ const Signup = () => {
     projectname: ''
   });
 
+  const [loading, setLoading] = useState(false); // Loading state
+
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((prevData) => ({
@@ -36,12 +38,13 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Start loading
+
     try {
       const response = await axios.post("https://teaminfo-9ygo.onrender.com/api/auth/signup", formData, {
-        headers: {
-          "Content-Type": "application/json",
-        }
+        headers: { "Content-Type": "application/json" }
       });
+
       if (response.status === 200) {
         alert(response.data.message);
         navigate("/login");
@@ -51,6 +54,9 @@ const Signup = () => {
       }
     } catch (error) {
       console.log(error);
+      alert("Something went wrong! Please try again.");
+    } finally {
+      setLoading(false); // Stop loading
     }
   };
 
@@ -150,14 +156,23 @@ const Signup = () => {
                       type="button"
                       className="btn btn-danger btn-lg"
                       onClick={handleReset}
+                      disabled={loading} // Disable during loading
                     >
                       Reset
                     </button>
                     <button
                       type="submit"
-                      className="btn btn-success btn-lg w-50 text-white"
+                      className="btn btn-success btn-lg w-50 text-white d-flex align-items-center justify-content-center"
+                      disabled={loading} // Disable during loading
                     >
-                      Register
+                      {loading ? (
+                        <>
+                          <span className="spinner-border spinner-border-sm me-2"></span>
+                          Registering...
+                        </>
+                      ) : (
+                        "Register"
+                      )}
                     </button>
                   </div>
 
