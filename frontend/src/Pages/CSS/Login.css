@@ -1,5 +1,145 @@
-.card-body h3{
-    color:black;
-    
-    font-style: normal;
-}
+/* Modern Glassmorphism Login Card */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4b6cb7, #182848); /* Darker gradient */
+  }
+  
+  .login-card {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    text-align: center;
+  }
+  
+  /* Improved text visibility */
+  .login-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Form Inputs */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.8); /* Lighter input fields */
+    color: #333; /* Dark text for readability */
+  }
+  
+  .login-input::placeholder {
+    color: #555; /* Darker placeholder text */
+  }
+  
+  .login-input:focus {
+    outline: none;
+    border: 2px solid #fff;
+    background: white;
+    color: #000;
+  }
+  
+  /* Login Button */
+  .login-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    background: #ff7eb3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .login-btn:hover {
+    background: #ff5790;
+  }
+  
+  /* Loading Spinner */
+  .loading-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .spinner {
+    width: 22px;
+    height: 22px;
+    border: 3px solid white;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Signup Link */
+  .signup-text {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: white;
+  }
+  
+  .signup-text a {
+    color:rgb(19, 18, 19);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .signup-text a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Login & Signup Buttons */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #ff6a00, #ee0979); /* 🔥 Vibrant gradient */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .login-btn:hover {
+    background: linear-gradient(135deg, #ee0979, #ff6a00); /* 🔄 Reverse gradient */
+    transform: scale(1.02);
+  }
+  
+  /* Google Button */
+  .google-btn {
+    background: #4285F4;
+    color: white;
+  }
+  
+  .google-btn:hover {
+    background: #357ae8;
+  }

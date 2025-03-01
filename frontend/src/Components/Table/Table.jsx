@@ -11,7 +11,7 @@ const Table = ({ data }) => {
   useEffect(() => {
     const fetchData = async (teamName) => {
       try {
-        const response = await axios.get(`https://teaminfo-9ygo.onrender.com/users/${teamName}`);
+        const response = await axios.get(`https://teaminfo-9ygo.onrender.com/api/user/users/${teamName}`);
         const dataa = response.data;
         const newdata = dataa.map((item) => ({
           name: item.name,
