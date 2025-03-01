@@ -1,47 +1,28 @@
-/* CSS for Signup component */
+.form-container {
+  display: flex;
+  align-items: stretch;
+  height: auto;
+  min-height: 100vh;
+}
 
-.card-registration {
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card-registration .img-fluid {
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-top-right-radius: .25rem;
-    border-bottom-right-radius: .25rem;
-  }
-  
-  .card-registration .card-body {
-    padding: 3rem;
-  }
-  
-  .card-registration h3 {
-    font-size: 1.6rem;
-    font-weight: bold;
-  }
-  
-  .card-registration .form-control-lg {
-    height: 50px;
-    font-size: 1rem;
-  }
-  
-  .card-registration .form-label {
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  
-  .card-registration .btn-lg {
-    height: 50px;
-    font-size: 1rem;
-    border-radius: 8px;
-  }
-  
-  @media (max-width: 1199.98px) {
-    .card-registration .img-fluid {
-      display: none;
-    }
-  }
-  
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 100%;
+}
+
+.form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}

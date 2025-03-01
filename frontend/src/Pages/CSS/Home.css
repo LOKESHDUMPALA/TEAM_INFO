@@ -1,177 +1,192 @@
-  /* fontawesome importing */
+/* FontAwesome Icons */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
-            .header {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              background-color: #f5f5f5;
-            }
-            
-            .header .logo {
-              font-size: 25px;
-              font-family: 'Sriracha', cursive;
-              color: #000;
-              text-decoration: none;
-              margin-left: 30px;
-            }
-           
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
 
-            .nav-items {
-              display: flex;
-              justify-content: space-around;
-              align-items: center;
-              background-color: whitesmoke;
-              margin-right: 20px;
-            }
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 50px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-            .nav-items a {
-              text-decoration: none;
-              color: blue;
-              padding: 35px 20px;
-            }
+.header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #007bff;
+}
 
-            .intro {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              width: 100%;
-              height: 520px;
-              background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://www.slideteam.net/media/catalog/product/cache/1280x720/1/1/1114_3d_colored_team_for_unity_and_teamwork_stock_photo_Slide01.jpg");
-              background-size: cover;
-              background-position: center;
-              background-repeat: no-repeat;
-            }
+.nav-items a {
+  text-decoration: none;
+  color: #007bff;
+  margin-left: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
 
-            .intro h1 {
-              font-family: sans-serif;
-              font-size: 60px;
-              color: #fff;
-              font-weight: bold;
-              text-transform: uppercase;
-              margin: 0;
-            }
+.nav-items a:hover {
+  color: #0056b3;
+}
 
-            .intro p {
-              font-size: 20px;
-              color: #d1d1d1;
-              text-transform: uppercase;
-              margin: 20px 0;
-            }
+/* Hero Section */
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url("https://www.slideteam.net/media/catalog/product/cache/1280x720/1/1/1114_3d_colored_team_for_unity_and_teamwork_stock_photo_Slide01.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+}
 
-            .intro button {
-              background-color: #5edaf0;
-              color: #000;
-              padding: 10px 25px;
-              border: none;
-              border-radius: 5px;
-              font-size: 20px;
-              font-weight: bold;
-              cursor: pointer;
-              box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
-            }
+.title {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
-            .achievements {
-              display: flex;
-              justify-content: space-around;
-              align-items: center;
-              padding: 40px 0px;
-          
-            }
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color:white
+}
 
-            .achievements .work {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              padding-left: 30px;
-              margin-left: 0px;
-            }
+.cta-button {
+  background-color: #5edaf0;
+  color: black;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-            .achievements .work i {
-              width: fit-content;
-              font-size: 50px;
-              color: #333333;
-              border-radius: 50%;
-              border: 2px solid #333333;
-              padding: 12px;
-            }
+.cta-button:hover {
+  background-color: #4ec3d4;
+}
 
-            .achievements .work .work-heading {
-              font-size: 20px;
-              color: #333333;
-              text-transform: uppercase;
-              margin: 10px 0;
-            }
+/* Achievements Section */
+.achievements {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
 
-            .achievements .work .work-text {
-              font-size: 15px;
-              color: #585858;
-              margin: 10px 0;
-            }
+.work {
+  text-align: center;
+  padding: 20px;
+  transition: 0.3s;
+}
 
-            .mySlides {
-              display: inline-block;
-              margin-left: auto;
-              margin-right: auto;
-              width: 0%;
-              height:520px;
-            }
+.work:hover {
+  transform: scale(1.05);
+}
 
-            .w3-left, .w3-right, .w3-badge {
-              cursor:pointer
-            }
+.work i {
+  font-size: 50px;
+  color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  padding: 15px;
+  margin-bottom: 10px;
+}
 
-            .w3-badge {
-              height:13px;width:13px;padding:0
-            }
+.work-heading {
+  font-size: 18px;
+  font-weight: bold;
+}
 
-            .footer {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              background-image:url("../../Components/Assets/Homes.png");
-              padding: 40px 80px;
-            
-              background-size:100% 100%;
-              background-repeat:no-repeat;
-            
-            }
+.work-text {
+  font-size: 14px;
+  color: #666;
+}
 
-            .footer .copy {
-              color: #fff;
-            }
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #343a40;
+  padding: 40px 80px;
+  color: white;
+}
 
-            .bottom-links {
-              display: flex;
-              justify-content: space-around;
-              align-items: center;
-              padding: 40px 0;
-            }
-             .assiassi
-             {
-                color:blue;
-             }
-            .bottom-links .links {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              padding: 0 40px;
-              
-            }
+.bottom-links {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
 
-            .bottom-links .links span {
-              font-size: 20px;
-              color: #fff;
-              text-transform: uppercase;
-              margin: 10px 0;
-            }
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-            .bottom-links .links a {
-              text-decoration: none;
-              color: #fff;
-              padding: 10px 20px;
-            }
-            
+.links span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.links a {
+  text-decoration: none;
+  color: #ddd;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: #5edaf0;
+}
+
+.fab {
+  font-size: 24px;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.fab:hover {
+  color: #5edaf0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-items {
+    margin-top: 10px;
+  }
+
+  .achievements {
+    flex-direction: column;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bottom-links {
+    flex-direction: column;
+  }
+}
